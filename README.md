@@ -33,7 +33,6 @@ jobs:
       - uses: positronlabs/flux-pr-size-checker@v1
         with:
           flux-token: ${{ secrets.FLUX_TOKEN }}
-          flux-url: ${{ vars.FLUX_URL }}
 ```
 
 ## Setup
@@ -42,7 +41,7 @@ jobs:
 2. Go to **Org Admin > Tools** and create an API key
 3. Go to **Product > Tools** and configure PR Size Checker with trigger app "CLI"
 4. Set the line threshold and feedback mode (blocking or advisory)
-5. Add `FLUX_TOKEN` as a repository secret and `FLUX_URL` as a repository variable
+5. Add `FLUX_TOKEN` as a repository secret
 6. Add the workflow above to your repository
 
 ## Inputs
@@ -50,7 +49,6 @@ jobs:
 | Input | Required | Description |
 |-------|----------|-------------|
 | `flux-token` | Yes | API key from Flux (Org Admin > Tools > API Keys) |
-| `flux-url` | Yes | URL of your Flux instance |
 
 ## Behaviour
 
