@@ -24,9 +24,8 @@ runs:
       shell: bash
       env:
         FLUX_TOKEN: ${{ inputs.flux-token }}
-        FLUX_TOOL: pr-size-checker
         GITHUB_REPOSITORY: ${{ github.repository }}
         PR_NUMBER: ${{ github.event.pull_request.number }}
         GITHUB_SHA: ${{ github.event.pull_request.head.sha }}
         GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
-      run: ${{ github.action_path }}/flux-scanner
+      run: ${{ github.action_path }}/flux-scanner --tool pr-size-checker
