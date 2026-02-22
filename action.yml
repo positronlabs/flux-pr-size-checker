@@ -23,7 +23,6 @@ runs:
     - name: Check PR Size
       shell: bash
       env:
-        FLUX_URL: http://localhost:5000
         FLUX_TOKEN: ${{ inputs.flux-token }}
         FLUX_TOOL: pr-size-checker
         GITHUB_REPOSITORY: ${{ github.repository }}
